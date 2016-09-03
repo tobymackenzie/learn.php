@@ -20,7 +20,7 @@ class Test extends PHPUnit_Framework_TestCase{
 			unlink($path);
 		}
 		$this->manager->persistCollection('test');
-		$this->assertTrue(file_exists($path), 'test.json should be created when persisting collection.');
+		$this->assertFileExists($path, 'test.json should be created when persisting collection.');
 	}
 	public function testPersistData(){
 		$path = $this->dataDir . '/test.json';
